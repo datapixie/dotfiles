@@ -178,6 +178,7 @@ set -o noclobber
 alias ll="ls -alrtF --color"
 alias la="ls -A"
 alias l="ls -CF"
+alias lp="ls -lrtX -h -d -1 $PWD/*"
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias m='less'
@@ -187,6 +188,9 @@ alias md='mkdir'
 alias cl='clear'
 alias du='du -ch --max-depth=1'
 alias treeacl='tree -A -C -L 2'
+
+# 2.25 Screen commands
+alias s='echo $STY'
 
 # 2.3) Text and editor commands
 alias em='emacs -nw'     # No X11 windows
