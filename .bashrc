@@ -175,22 +175,24 @@ alias cp="cp -i"
 set -o noclobber
 
 # 2.2) Listing, directories, and motion
-alias ll="ls -alrtF --color"
-alias la="ls -A"
-alias l="ls -CF"
+alias ll="ls -alhrtF --color"
+alias la="ls -Ah"
+alias l="ls -CFh"
 alias lp="ls -lrtX -h -d -1 $PWD/*"
 alias dir='ls --color=auto --format=vertical'
-alias vdir='ls --color=auto --format=long'
+alias vdir='ls --color=auto --format=long -h'
 alias m='less'
 alias ..='cd ..'
 alias ...='cd ..;cd ..'
 alias md='mkdir'
 alias cl='clear'
-alias du='du -ch --max-depth=1'
+# alias du='du -ch --max-depth=1'
 alias treeacl='tree -A -C -L 2'
 
-# 2.25 Screen commands
+
+# 2.25) Screen commands
 alias s='echo $STY'
+
 
 # 2.3) Text and editor commands
 alias em='emacs -nw'     # No X11 windows
@@ -207,6 +209,8 @@ export GREP_COLOR='1;31' # green for matches
 # http://www.gnu.org/software/coreutils/faq/coreutils-faq.html#Sort-does-not-sort-in-normal-order_0021
 unset LANG
 export LC_ALL=POSIX
+
+
 
 # 2.6) Install rlwrap if not present
 # http://stackoverflow.com/a/677212
